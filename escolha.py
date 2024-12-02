@@ -2,19 +2,20 @@ print("Bem-vindo à Escolha do Caminho!\n")
 
 print("Escolha um caminho para prosseguir:\n")
 escolha = ""
-while escolha not in ["A" or "a","B" or "b","C" or "c"]:
+while escolha.lower() not in ["a","b","c"]:
 
     print("Caminho A")
     print("Caminho B")
     print("Caminho C\n")
 
-    escolha = input("Escolha um caminho:")
+    escolha = input("Escolha um caminho: ").strip()
 
-    if escolha == 'a' or 'A':
+     if escolha.lower() == 'a':
         print("Caminho Errado")
-    elif escolha == 'b' or 'B':
+    elif escolha.lower() == 'b':
         print("Caminho Errado")
-    elif escolha == 'c' or 'C':
+    elif escolha.lower() == 'c':
         print("Caminho Correto")
+        break 
     else:
-        print("print nenhum caminho selecionado")
+        print("Nenhum caminho válido selecionado. Tente novamente.")
